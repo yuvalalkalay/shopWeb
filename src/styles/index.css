@@ -1,0 +1,53 @@
+body{
+    background-color: whitesmoke;
+}
+.h1{
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+.productDiv{
+    padding: 80px 20px 20px 20px;
+    background-color: white;
+    border: 1px;
+    border-radius: 15px;
+    box-shadow: 6px 6px 10px -4px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 6px 6px 10px -4px rgba(0,0,0,0.5);
+    -moz-box-shadow: 6px 6px 10px -4px rgba(0,0,0,0.5);
+}
+
+.image{
+    width: 80px;
+    height: 80px;
+}
+
+.mainDiv{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    margin-left: 200px;
+    margin-right: 200px;
+    gap: 20px;
+}
+
+.navBar{
+    margin : 0;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    background-color: rgb(76, 0, 255);
+    color: white;
+    font-size: larger;
+    padding: 15px;
+    top: 0;
+    width: 100%;
+    position: fixed;
+}
+
+.link{
+    padding: 15px;
+}
+ 
+.link:hover{
+    background-color: rgb(115, 56, 252);
+    color: white;
+}
