@@ -8,7 +8,7 @@ const HomePage = ()=>{
 const fakeApi = 'https://fakestoreapi.com/products';
 const [products , setProducts] = useState([]);
 useEffect( async () => {
-  let res = axios.get(fakeApi);
+  let res = await axios.get(fakeApi);
   res =  (await res).data;
     setProducts(res);
 },[])
