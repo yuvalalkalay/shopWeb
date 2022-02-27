@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/shop-web/static/css/main.a4c06e64.css",
-    "main.js": "/shop-web/static/js/main.c866610e.js",
-    "static/js/787.68ad8508.chunk.js": "/shop-web/static/js/787.68ad8508.chunk.js",
-    "static/media/logo.svg": "/shop-web/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/shop-web/index.html",
-    "main.a4c06e64.css.map": "/shop-web/static/css/main.a4c06e64.css.map",
-    "main.c866610e.js.map": "/shop-web/static/js/main.c866610e.js.map",
-    "787.68ad8508.chunk.js.map": "/shop-web/static/js/787.68ad8508.chunk.js.map"
+    "main.css": "/shopWeb.github.io/shop-web/static/css/main.a4c06e64.css",
+    "main.js": "/shopWeb.github.io/shop-web/static/js/main.53a2d1f5.js",
+    "static/js/787.68ad8508.chunk.js": "/shopWeb.github.io/shop-web/static/js/787.68ad8508.chunk.js",
+    "static/media/logo.svg": "/shopWeb.github.io/shop-web/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/shopWeb.github.io/shop-web/index.html",
+    "main.a4c06e64.css.map": "/shopWeb.github.io/shop-web/static/css/main.a4c06e64.css.map",
+    "main.53a2d1f5.js.map": "/shopWeb.github.io/shop-web/static/js/main.53a2d1f5.js.map",
+    "787.68ad8508.chunk.js.map": "/shopWeb.github.io/shop-web/static/js/787.68ad8508.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a4c06e64.css",
-    "static/js/main.c866610e.js"
+    "static/js/main.53a2d1f5.js"
   ]
 }
