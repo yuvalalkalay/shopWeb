@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import {useEffect, useState} from 'react';
+
 import NavBar from './NavBar';
 import '../styles/index.css';
 
@@ -8,7 +9,7 @@ const HomePage = ()=>{
 const fakeApi = 'https://fakestoreapi.com/products';
 const [products , setProducts] = useState([]);
 useEffect( async () => {
-  let res = await axios.get(fakeApi);
+  let res = axios.get(fakeApi);
   res =  (await res).data;
     setProducts(res);
 },[])
