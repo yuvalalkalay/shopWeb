@@ -1,11 +1,15 @@
 import React from 'react';
 import axios from 'axios';
 import {useEffect, useState} from 'react';
-
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { slice } from '../redux/store';
 import NavBar from './NavBar';
 import '../styles/index.css';
 
 const HomePage = ()=>{
+const navigate = useNavigate();
+const dispatch = useDispatch();
 const fakeApi = 'https://fakestoreapi.com/products';
 const [products , setProducts] = useState([]);
 useEffect( async () => {
@@ -13,6 +17,11 @@ useEffect( async () => {
   res =  (await res).data;
     setProducts(res);
 },[])
+
+const handleProDuct = (id)=>{
+    dispatch( slice.actions.id(id) )
+    navigate('/product');
+}
 
 const repiter = products.map((product, index)=>{
         let title = '';
@@ -24,7 +33,7 @@ const repiter = products.map((product, index)=>{
         }
 
     return(
-        <div className='productDiv' key={index} onClick={()=>{console.log(product.id)}}>
+        <div className='productDiv' key={index} onClick={()=>{handleProDuct(product.id)}} >
             <img className='image' src={product.image} width={80} width={80} alt="this is product image" />
             <h5>{title}</h5>
             <span>{`${product.price}$`}</span>

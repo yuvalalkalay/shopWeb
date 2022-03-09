@@ -4,14 +4,20 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom';
 
 import HomePage from './components/HomePage';
 import CategoryPage from './components/CategoryPage';
+import ProductPage from './components/ProductPage';
+import SignIn from './components/SignInPage';
+import CreateAccount from './components/CreateAccountPage';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<HomePage />} />
+          <Route path='/shop-web' element={<HomePage />} />
           <Route path='/category' element={<CategoryPage />} />
+          <Route path='/product' element={<ProductPage />} />
+          <Route path='/signIn' element={<SignIn />} />
+          <Route path='createAccount' element={<CreateAccount />} />
         </Routes>
       </BrowserRouter>
     </div>

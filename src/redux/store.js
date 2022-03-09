@@ -10,6 +10,9 @@ const slice = createSlice({
     reducers: {
         category : (state, action) => {
             state.category = action.payload;
+        },
+        id : (state, action) => {
+            state.id = action.payload;
         }
     }
 })
