@@ -10,7 +10,7 @@ import '../styles/index.css';
 
 const CategoryPage = ()=>{
     const dispatch = useDispatch();
-    const fakeApi = 'https://fakestoreapi.com/products';
+    const fakeApi = 'http://localhost:3030/products';
     const navigate = useNavigate();
     const category = useSelector( state => state.slice.category);
     const [ products, setProducts ] = useState([]);
@@ -39,8 +39,8 @@ const CategoryPage = ()=>{
         }
 
         return(
-        <div className='productDiv' key={index} onClick={()=>{handleProDuct(product.id)}}>
-            <img className='image' src={product.image} width={80} width={80} alt="this is product image" />
+        <div className='productDiv' key={index} onClick={()=>{handleProDuct(product._id)}}>
+            <img className='image' src={product.image} width={80} height={80} alt="this is product image" />
             <h5>{title}</h5>
             <span>{`${product.price}$`}</span>
         </div>
