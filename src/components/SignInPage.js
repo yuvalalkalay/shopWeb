@@ -43,6 +43,11 @@ import { slice } from "../redux/store";
                 filtered[0].cart.forEach(product => {
                     dispatch( slice.actions.quantity(product));
                 });
+
+                if(filtered[0].admin === true){
+                    dispatch(slice.actions.adminState('link'));
+                }
+
                 dispatch( slice.actions.SignState('Sign Out'));
                 navigate('/shop-web');
             }

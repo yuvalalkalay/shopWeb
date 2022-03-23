@@ -10,7 +10,8 @@ const CreateAccount = ()=>{
         firstName : '',
         lastName : '',
         userName : '',
-        password : ''
+        password : '',
+        admin : false
     })
 
     const handleInput = (e) =>{
@@ -26,6 +27,10 @@ const CreateAccount = ()=>{
         navigate('/shop-web');
     }
 
+    const handleCancel = ()=>{
+        navigate('/signIn');
+    }
+
     return(
         <div>
             <NavBar />
@@ -38,7 +43,7 @@ const CreateAccount = ()=>{
             user name : <input name="userName" value={input.userName} onChange={e => handleInput(e)} type={'text'} /><br/>
             password : <input name="password" value={input.password} onChange={e => handleInput(e)} type={'password'} /><br/>
             <button onClick={() => {handleCreate()}}>create</button>
-            <button>Cancel</button>
+            <button onClick={() => {handleCancel()}}>Cancel</button>
         </div>
     )
 }

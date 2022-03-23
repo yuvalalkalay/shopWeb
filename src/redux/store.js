@@ -6,7 +6,10 @@ const initialState = {
     useId : '',
     useName : '',
     SignState : 'Sign In',
-    quantity : []
+    quantity : [],
+    user2UpdateId : '',
+    product2UpdateId : '',
+    adminState : 'invisible',
 }
 
 const slice = createSlice({
@@ -39,6 +42,15 @@ const slice = createSlice({
         },
         removeAllProuct : (state) => {
             state.quantity = [];
+        },
+        user2UpdateId : (state, action) =>{
+            state.user2UpdateId = action.payload;
+        },
+        product2UpdateId : (state, action) =>{
+            state.product2UpdateId = action.payload;
+        },
+        adminState : (state, action) => {
+            state.adminState = action.payload;
         }
     }
 })

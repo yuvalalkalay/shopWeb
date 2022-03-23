@@ -7,7 +7,8 @@ const userSchema = new schema   ({
     firstName : String,
     lastName : String,
     password : String,
-    cart : Array
+    cart : Array,
+    admin : Boolean
 })
 
 module.exports = mongoose.model( 'UsersShop_DB', userSchema );
