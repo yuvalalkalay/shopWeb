@@ -138,3 +138,18 @@ body{
 .invisible{
     display: none;
 }
+
+.addNewProduct{
+    height: 50px;
+    width: 180px;
+    border-radius: 15px;
+    color: white;
+    font-size: large;
+    background-color: #00b4d8;
+    border-style: none;
+    transition-duration: 200ms;
+}
+
+.addNewProduct:hover{
+    background-color: #4361ee;
+}

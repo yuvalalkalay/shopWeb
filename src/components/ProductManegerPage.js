@@ -25,6 +25,10 @@ const ProductManeger = ()=>{
         console.log(id);
     }
 
+    const handleAddNewProduct = ()=>{
+        navigate('/addProduct');
+    }
+
     const repiter = products.map(( product, index) => {
         return(
             <div key={index}>
@@ -45,6 +49,7 @@ const ProductManeger = ()=>{
             <br/>
             <br/>
             <h1>product maneger</h1>
+            <button className="addNewProduct" onClick={handleAddNewProduct}>add new product +</button>
             {repiter}
         </div>
     )
