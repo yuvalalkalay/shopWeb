@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,  useCallback } from "react";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -16,13 +16,34 @@ const ProductManeger = ()=>{
         setProducts(productsRes);
     },[])
 
+    useCallback(() => {
+        repiter = products.map(( product, index) => {
+            return(
+                <div key={index}>
+                    <h3>{product.title}</h3>
+                    <img src={product.image} alt="undefine" height={100} width={100}/><br/>
+                    <button onClick={() => {handleUpdate(product._id)}}>update</button>
+                    <button onClick={() => {handleDelete(product._id)}}>delete</button>
+                    <br/>
+                    <br/>
+                    <br/>
+                </div>
+            )
+        })
+    },[products])
+
     const handleUpdate = (id)=>{
         dispatch(slice.actions.product2UpdateId(id));
         navigate('/productManegerUpdate');
     }
 
-    const handleDelete = (id)=>{
+    const handleDelete = async (id)=>{
         console.log(id);
+        await axios.delete(`${productsUrl}/${id}`);
+        const afterDel = products.filter((p) => p._id !== id);
+        console.log(afterDel);
+        setProducts( afterDel );
+        alert('product deleted sucessfully');
     }
 
     const handleAddNewProduct = ()=>{
