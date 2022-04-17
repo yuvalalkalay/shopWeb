@@ -13,7 +13,7 @@ const NavBar = ()=>{
     const signState = useSelector( state => state.slice.SignState);
     const userId = useSelector( state => state.slice.useId);
     const adminState = useSelector( state => state.slice.adminState);
-
+    const [input, setInput] = useState('');
 
     const handleOnclick = (category)=>{
         dispatch(slice.actions.category(category));
@@ -50,9 +50,21 @@ const NavBar = ()=>{
         navigate('/cart');
     }
 
+    const handleInput = (e)=>{
+        setInput( e.target.value );
+    }
+
+    const handleSearch = ()=>{
+        console.log(input);
+        dispatch(slice.actions.search(input));
+        navigate('/search');
+    }
+
     return(
         <nav>
             <ul className="navBar">
+                <li><span className="link" onClick={() => handleSearch()}> search </span></li>
+                <li><input type='text' onChange={(e) => {handleInput(e)}}/></li>
                 <li><span className="link" onClick={() => handleOnclickHome()}>Home</span></li>
                 <li><span className={adminState}  onClick={() => {handleUserManeger()}}>users maneger</span></li>
                 <li><span className={adminState} onClick={() => {handleProductManeger()}}>product maneger</span></li>

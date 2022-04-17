@@ -153,3 +153,8 @@ body{
 .addNewProduct:hover{
     background-color: #4361ee;
 }
+
+.oops{
+    grid-column-start:1 ;
+    grid-column-end: 6;
+}

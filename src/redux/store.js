@@ -10,6 +10,7 @@ const initialState = {
     user2UpdateId : '',
     product2UpdateId : '',
     adminState : 'invisible',
+    search : ''
 }
 
 const slice = createSlice({
@@ -51,6 +52,9 @@ const slice = createSlice({
         },
         adminState : (state, action) => {
             state.adminState = action.payload;
+        },
+        search : (state, action) => {
+            state.search = action.payload;
         }
     }
 })

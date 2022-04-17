@@ -13,6 +13,7 @@ import UsersManegerUpdate from './components/UsersManegerUpdate';
 import ProductManeger from './components/ProductManegerPage';
 import ProductManegerUpdate from './components/ProductManegerUpdatePage';
 import AddProduct from './components/AddProductPage';
+import SearchPage from './components/SearchPage';
 import React from 'react';
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
           <Route path='/productManeger' element={<ProductManeger />} />
           <Route path='/productManegerUpdate' element={<ProductManegerUpdate />} />
           <Route path='/addProduct' element={<AddProduct />} />
+          <Route path='/search' element={<SearchPage />} />
         </Routes>
       </BrowserRouter>
     </div>
